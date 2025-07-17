@@ -44,7 +44,7 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
       title: TitleHeading2Widget(
         text: title,
         fontSize: 16.sp,
-        color: CustomColor.lightFontColor,
+        color: CustomColor.darkFontColor,
       ),
       actions: actions,
       leading: showBackButton
@@ -60,8 +60,7 @@ class PrimaryAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: elevation,
       toolbarHeight: toolbarHeight,
       scrolledUnderElevation: 0,
-      backgroundColor:
-          backgroundColor ?? Theme.of(context).scaffoldBackgroundColor,
+      backgroundColor: CustomColor.lightBackgroundColor,
       automaticallyImplyLeading: autoLeading,
     );
   }

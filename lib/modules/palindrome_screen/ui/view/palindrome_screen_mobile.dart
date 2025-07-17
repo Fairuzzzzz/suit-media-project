@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/semantics.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
-import 'package:get/state_manager.dart';
+import 'package:suit_media_project/core/routes/routes.dart';
 import 'package:suit_media_project/core/ui/theme/custom_color.dart';
 import 'package:suit_media_project/core/ui/widgets/button/primary_button.dart';
 import 'package:suit_media_project/core/ui/widgets/form_field/primary_form_field.dart';
@@ -64,7 +64,14 @@ class PalindromScreenMobile extends StatelessWidget {
                   ScaledVerticalSpace(12),
                   PrimaryButton(
                     title: "Next",
-                    onPressed: () {},
+                    onPressed: () => Get.toNamed(
+                      Routes.secondPage,
+                      arguments: {
+                        'name': controller.nameController.text.isNotEmpty
+                            ? controller.nameController.text
+                            : "Selected User Name",
+                      },
+                    ),
                     buttonColor: CustomColor.primaryColor,
                   ),
                 ],

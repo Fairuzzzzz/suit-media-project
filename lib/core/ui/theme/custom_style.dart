@@ -22,12 +22,12 @@ class CustomStyle {
   );
   static var darkHeading4TextStyle = GoogleFonts.inter(
     fontSize: Dimensions.headingTextSize4,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w500,
     color: CustomColor.darkFontColor,
   );
   static var darkHeading5TextStyle = GoogleFonts.inter(
     fontSize: Dimensions.headingTextSize5,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w500,
     color: CustomColor.darkFontColor,
   );
 
@@ -49,12 +49,12 @@ class CustomStyle {
   );
   static var lightHeading4TextStyle = GoogleFonts.inter(
     fontSize: Dimensions.headingTextSize4,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w500,
     color: CustomColor.lightFontColor,
   );
   static var lightHeading5TextStyle = GoogleFonts.inter(
     fontSize: Dimensions.headingTextSize5,
-    fontWeight: FontWeight.w700,
+    fontWeight: FontWeight.w500,
     color: CustomColor.lightFontColor,
   );
 }

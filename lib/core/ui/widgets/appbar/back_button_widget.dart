@@ -24,11 +24,10 @@ class BackButtonWidget extends StatelessWidget {
             Dimensions.radius *
                 Dimensions().switchOnTablet(context, ifTrue: 10, ifFalse: 1.2),
           ),
-          color: CustomColor.darkGrayColor,
         ),
-        width: 12,
-        height: 12,
-        child: HeroIcon(HeroIcons.chevronLeft, color: CustomColor.grayColor),
+        width: 16,
+        height: 16,
+        child: HeroIcon(HeroIcons.chevronLeft, color: CustomColor.primaryColor),
       ),
     );
   }
