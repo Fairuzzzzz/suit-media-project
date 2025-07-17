@@ -9,21 +9,41 @@ import 'package:suit_media_project/core/ui/widgets/text_label/title_heading3_wid
 import 'package:suit_media_project/modules/third_screen/controller/third_screen_controller.dart';
 import 'package:suit_media_project/modules/third_screen/ui/widget/user_list_item_widget.dart';
 
-class ThirdScreenMobile extends StatelessWidget {
+class ThirdScreenMobile extends StatefulWidget {
   const ThirdScreenMobile({super.key});
 
   @override
+  State<ThirdScreenMobile> createState() => _ThirdScreenMobileState();
+}
+
+class _ThirdScreenMobileState extends State<ThirdScreenMobile> {
+  late ScrollController scrollController;
+  late ThirdScreenController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = Get.put(ThirdScreenController());
+    scrollController = ScrollController();
+    scrollController.addListener(_scrollListener);
+  }
+
+  void _scrollListener() {
+    if (scrollController.position.pixels >=
+        scrollController.position.maxScrollExtent - 20) {
+      controller.fetchUsers();
+    }
+  }
+
+  @override
+  void dispose() {
+    scrollController.removeListener(_scrollListener);
+    scrollController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    final controller = Get.put(ThirdScreenController());
-    final scrollController = ScrollController();
-
-    scrollController.addListener(() {
-      if (scrollController.position.pixels ==
-          scrollController.position.maxScrollExtent) {
-        controller.fetchUsers();
-      }
-    });
-
     return Scaffold(
       backgroundColor: CustomColor.lightBackgroundColor,
       appBar: PrimaryAppBar('Third Screen', showBackButton: true),
