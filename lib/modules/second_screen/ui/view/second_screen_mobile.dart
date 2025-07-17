@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:get/instance_manager.dart';
 import 'package:get/state_manager.dart';
+import 'package:suit_media_project/core/routes/routes.dart';
 import 'package:suit_media_project/core/ui/theme/custom_color.dart';
 import 'package:suit_media_project/core/ui/widgets/appbar/primary_appbar.dart';
 import 'package:suit_media_project/core/ui/widgets/button/primary_button.dart';
@@ -51,7 +53,7 @@ class SecondScreenMobile extends StatelessWidget {
               ),
               PrimaryButton(
                 title: "Choose a User",
-                onPressed: () {},
+                onPressed: () => Get.toNamed(Routes.thirdPage),
                 buttonColor: CustomColor.primaryColor,
               ),
             ],
