@@ -73,7 +73,7 @@ class _PrimaryFormFieldState extends State<PrimaryFormField> {
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.zero,
-      padding: EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+      padding: EdgeInsets.symmetric(horizontal: 6, vertical: 4),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(widget.radius ?? 12),
         color: widget.color ?? CustomColor.lightBackgroundColor,
@@ -101,7 +101,7 @@ class _PrimaryFormFieldState extends State<PrimaryFormField> {
           ),
           suffixIcon: _setSuffixIcon(),
           border: InputBorder.none,
-          fillColor: widget.fillColor ?? CustomColor.darkGrayColor,
+          fillColor: widget.fillColor ?? CustomColor.lightBackgroundColor,
           filled: widget.isFilled,
         ),
         onTapAlwaysCalled: true,

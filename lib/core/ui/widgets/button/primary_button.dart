@@ -85,7 +85,7 @@ class PrimaryButton extends StatelessWidget {
               style: CustomStyle.darkHeading3TextStyle.copyWith(
                 fontSize: fontSize,
                 fontWeight: fontWeight ?? FontWeight.w600,
-                color: buttonTextColor ?? CustomColor.darkFontColor,
+                color: buttonTextColor ?? CustomColor.lightFontColor,
               ),
             ),
           ],
