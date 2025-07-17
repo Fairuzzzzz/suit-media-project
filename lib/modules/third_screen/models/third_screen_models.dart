@@ -1,5 +1,3 @@
-import 'package:get/get_connect/http/src/utils/utils.dart';
-
 class UserResponse {
   final int page;
   final int perPage;

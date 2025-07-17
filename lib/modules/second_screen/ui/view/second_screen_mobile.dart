@@ -45,15 +45,15 @@ class SecondScreenMobile extends StatelessWidget {
               Expanded(
                 child: Center(
                   child: TitleHeading2Widget(
-                    text: controller.userName.value.isEmpty
+                    text: controller.selectedUsername.isEmpty
                         ? "Selected User Name"
-                        : controller.userName.value,
+                        : controller.selectedUsername.value,
                   ),
                 ),
               ),
               PrimaryButton(
                 title: "Choose a User",
-                onPressed: () => Get.toNamed(Routes.thirdPage),
+                onPressed: controller.navigateToUserSelection,
                 buttonColor: CustomColor.primaryColor,
               ),
             ],
